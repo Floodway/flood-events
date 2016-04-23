@@ -1,0 +1,27 @@
+{
+  "name": "flood-events",
+  "version": "1.0.0",
+  "description": "Event service used by Floodway systems",
+  "main": "./build/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Floodway/flood-events.git"
+  },
+  "keywords": [
+
+    "floodway"
+  ],
+  "author": "ElectricCookie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Floodway/flood-events/issues"
+  },
+  "homepage": "https://github.com/Floodway/flood-events#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-coffee": "^2.3.2"
+  }
+}
