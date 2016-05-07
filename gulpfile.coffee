@@ -1,14 +1,9 @@
-###	
-	Floodway/flood-events GULPFILE
-
-###
-
 gulp 	= require("gulp")
 coffee 	= require("gulp-coffee")
+#Floodway/flood-events GULPFILE
+#Thank you for considering to contribute. This file is used to compile files in the src directory.
 
-# Thank you for considering to contribute. This file is used to compile files in the src directory. 
-
-#  Directories
+#Directories
 srcDir = "./src/**/*.coffee"
 buildDir = "./build"
 
