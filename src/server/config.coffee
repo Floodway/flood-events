@@ -1,5 +1,5 @@
 env = process.env
-utils = require("./utils")
+utils = require("./../utils")
 config =
 
   port: env.port ? 3000

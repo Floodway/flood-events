@@ -2,7 +2,7 @@ var config, env, ref, ref1, ref2, utils;
 
 env = process.env;
 
-utils = require("./utils");
+utils = require("./../utils");
 
 config = {
   port: (ref = env.port) != null ? ref : 3000,
