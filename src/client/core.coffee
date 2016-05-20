@@ -89,8 +89,7 @@ class FloodEventEmitter
       )
 
           
-    emit: (name,params,local=false) ->
-
+    emit: (name,params,local=false) =>
       if not local
         @sendData(
 

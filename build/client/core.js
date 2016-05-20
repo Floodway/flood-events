@@ -1,4 +1,5 @@
-var FloodEventEmitter, WebSocket, l, utils;
+var FloodEventEmitter, WebSocket, l, utils,
+  bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
 WebSocket = require("ws");
 
@@ -14,6 +15,7 @@ FloodEventEmitter = (function() {
       autoConnect = true;
     }
     this.log = log != null ? log : true;
+    this.emit = bind(this.emit, this);
     this.listeners = {};
     if (autoConnect) {
       this.connect();
