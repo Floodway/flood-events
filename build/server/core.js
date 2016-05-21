@@ -13,7 +13,8 @@ config = require("./config");
 EventServer = (function(superClass) {
   extend(EventServer, superClass);
 
-  function EventServer() {
+  function EventServer(callback) {
+    EventServer.__super__.constructor.call(this);
     l.log("Constructing Server...");
     this.server = new WsServer({
       port: config.port,
@@ -33,9 +34,9 @@ EventServer = (function(superClass) {
       }
     });
     l.log("Server listening on port: " + config.port);
-    this.emit("ready");
     this.processors = [];
     this.listeners = {};
+    callback();
   }
 
   EventServer.prototype.handleConnection = function(connection) {

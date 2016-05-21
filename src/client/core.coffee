@@ -5,13 +5,13 @@ l =require("./../log")
 class FloodEventEmitter
 
     constructor: (@url,@secret,autoConnect=true,@log=true) ->
-
+      
       @listeners = {}
 
       if autoConnect then @connect()
 
     connect: ->
-
+ 
         @client = new WebSocket(@url)
 
         @client.on("message",(message) =>

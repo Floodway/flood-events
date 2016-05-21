@@ -5,8 +5,8 @@ config = require("./config")
 
 class EventServer extends EventEmitter
   
-  constructor: ->
-
+  constructor: (callback) ->
+    super()
     l.log("Constructing Server...")
 
     @server = new WsServer(
@@ -29,11 +29,14 @@ class EventServer extends EventEmitter
     )
 
     l.log("Server listening on port: #{ config.port }")
-  
-    @emit("ready")
+
+
+
     
     @processors = []
     @listeners = {}
+
+    callback()
 
 
   handleConnection: (connection) ->
